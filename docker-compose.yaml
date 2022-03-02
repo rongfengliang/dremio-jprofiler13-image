@@ -3,6 +3,9 @@ services:
   dremio:
      image: dalongrong/dremio:20.1.0-jprofiler13
      build: ./
+     privileged: true
+     cap_add:
+       - ALL
      ports:
      - "9047:9047"
      - "8849:8849"
